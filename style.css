@@ -1,0 +1,599 @@
+html{
+    background-color: rgba(240, 245, 241, 0.719);
+}
+/* .dob{
+    font-family: 'Karla', sans-serif;
+font-family: 'Nunito', sans-serif;
+font-family: 'PT Sans', sans-serif;
+font-family: 'Rubik', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+} */
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+@media (max-width:35em){
+    header{
+        color: rgb(12, 32, 97);
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em;
+        height: 3vh;
+        margin: 2vh;
+        width: 85vw;
+    }
+    .geticon{
+        background-color: rgb(145, 218, 36);
+        color: white;
+        padding: .2em;
+    }
+    .dp{
+        height: 1.1em;
+        width: 1.1em;
+        background-color: rgb(155, 154, 154);
+        border-radius: .5em;
+        margin: .7em;
+    }
+    #account{
+        display: grid;
+        grid-template-columns: 1fr 1fr .2fr;
+        justify-content: space-between;
+        align-content: space-between;
+        align-items: center;
+    }
+    #sidebar{
+        visibility: hidden;
+        position: fixed;
+        left: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        z-index: 20;
+    }
+    #sidebar img{
+        position: relative;
+        margin: 2em 0;
+        width: 1.6em;
+        /* margin-top:5vh ; */
+    }
+    #sidebar img:hover{
+        padding: .5em;
+        background-color: greenyellow;
+        transition: ease-in-out .3s;
+    }
+    #check{
+        display: none;
+    }
+    label #btn{
+        position: absolute;
+        left: 85vw;
+        top: 11vh;
+    }
+    label #btn:hover{
+        cursor: pointer;
+        font-size: 1.3em;
+        transition: ease-in-out .4s;
+    }
+    label #cancel{
+        margin-right: 5vw;
+        position: fixed;
+        left: 110vw;
+        visibility: hidden;
+    }
+    label #cancel:hover{
+        cursor: pointer;
+        font-size: 1.1em;
+        transition: ease-in-out .4s;
+    }
+    #check:checked ~ label #btn{
+        font-size: 1.3em;
+    }
+    #check:checked ~ label #cancel{
+        visibility: visible;
+        position: absolute;
+        left: 82vw;
+        top: 10vh;
+        transition: ease-in-out .5s;
+        z-index: 50;
+    }
+    #check:checked ~ #sidebar{
+        visibility: visible;
+        position: absolute;
+        left: 82vw;
+        top: 10vh;
+        width: 15vw;
+        z-index: 30;
+        transition: ease-in-out .5s;
+    }
+    button{
+        color: white;
+        background-color: rgb(145, 218, 36);
+        border: 0;
+        width: 6em;
+        height: 2em;
+    }
+    button:hover{
+        cursor: pointer;
+        font-size: .9em;
+        background-color: green;
+        transition: ease-in-out .3s;
+
+    }
+    main{
+        display: grid;
+        grid-template-columns: .12fr 1fr;
+    }
+    #employees{
+        font-family: 'Ubuntu', sans-serif;
+        color: rgb(12, 32, 97);
+        width: 85vw;
+        padding: 1.5em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #josh-bakery{
+        font-family: 'Karla', sans-serif;
+        color: rgb(12, 32, 97);
+        padding: 1.6em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        background-color: white;
+    }
+    .search{
+        padding:1em .5em;
+        display: grid;
+        grid-template-columns: .5fr .4fr 1fr;
+        justify-content: space-between;
+    }
+    .search input,select{
+        font-size: .6em;
+        border-radius: .4em;
+        border-color: rgb(212, 209, 209);
+        height: 3.5vh;
+        width: 20vw;
+    }
+    .search input{
+        margin-left: 5vw;
+        width: 40vw;
+    }
+    .search-here{
+        display: flex;
+        align-items: center;
+        
+    }
+    .search-here i{
+        font-size: .8em;
+        color: rgb(158, 157, 157);
+        position: absolute;
+        left: 88%;
+    }
+    .nextlist{
+        display: none;
+    }
+    #details-head{
+        display: none;
+    }
+    .employees-profile{
+        font-family: 'Nunito', sans-serif;
+        color: rgb(12, 32, 97);
+        font-weight: bolder;
+        height: 4vh;
+        font-size: .9em;
+        display: flex;
+        align-items: center;
+        width: 45vw;
+        text-align: center;
+        margin-bottom: 2vh;
+        margin-top: 3vh;
+        padding-left: 20vw;
+        background-color: white;
+    }
+    #employee-container{
+        color: rgb(12, 32, 97);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        justify-items: center;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: space-around;
+    }
+    #details{
+        font-family: 'PT Sans', sans-serif;
+        text-align: center;
+        font-size: .7em;
+        line-height: 3.5vh;
+        width: 40vw;
+        height: 25vh;
+        padding: .3em;        
+        background-color: white;
+        margin: .5em;
+    }
+    #details:hover{
+        cursor: pointer;
+        width: 40.5vw;
+        height: 25.5vh;
+        background: rgb(145, 218, 36);
+        color: white;
+        box-shadow: 0 0 1em rgb(147, 241, 118);
+        transition: ease-in-out .4s;
+    }
+    ul :nth-child(2){
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    ul :nth-child(3){
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    ul :nth-child(4){
+        font-size: .9em;
+    }
+    ul .checkweb{
+        display: none;
+    }
+
+}
+@media (min-width:35em){
+    header{
+        color: rgb(12, 32, 97);
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em;
+        height: 3vh;
+        margin: 2vh;
+    }
+    .geticon{
+        background-color: rgb(145, 218, 36);
+        color: white;
+        padding: .2em;
+    }
+    .dp{
+        height: 2em;
+        width: 2em;
+        background-color: rgb(155, 154, 154);
+        border-radius: 1em;
+        margin: 1em;
+    }
+    #account{
+        display: grid;
+        grid-template-columns: 1fr 1fr .2fr;
+        justify-content: space-between;
+        align-content: space-between;
+        align-items: center;
+    }
+    #call-sidebar{
+        display: none;
+    }
+    button{
+        color: white;
+        background-color: rgb(145, 218, 36);
+        border: 0;
+        width: 6em;
+        height: 2em;
+    }
+    button:hover{
+        cursor: pointer;
+        font-size: .9em;
+        background-color: green;
+        transition: ease-in-out .3s;
+
+    }
+    main{
+        display: grid;
+        grid-template-columns: .12fr 1fr;
+    }
+    #check{
+        display: none;
+    }
+    #btn{
+        display: none;
+    }
+    #cancel{
+        display: none;
+    }
+    #sidebar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10vh;
+        background-color: white;
+        height: 90%;
+        margin:0 2vh;
+    }
+    #sidebar img{
+        margin: 2em 0;
+        width: 1.6em;
+    }
+    #sidebar img:hover{
+        padding: .5em;
+        background-color: greenyellow;
+        transition: ease-in-out .3s;
+    }
+    #employees{
+        color: rgb(12, 32, 97);
+        padding: 1.5em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #josh-bakery{
+        color: rgb(12, 32, 97);
+        padding: 1.5em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+    }
+    #searchline{
+        padding: 1.5em;
+        display: grid;
+        grid-template-columns: 1fr .17fr;
+    }
+    #searchbox{
+        display: flex;
+        justify-content: flex-end;
+        justify-content: space-between;
+    }
+    .search{
+        display: flex;
+        flex-direction: row;
+    }
+    #searchbox{
+        display: flex;
+        justify-content: flex-end;
+        justify-content: space-between;
+    }
+    .search input,select{
+        font-size: .6em;
+        border-radius: .4em;
+        border-color: rgb(212, 209, 209);
+        height: 3.5vh;
+        width: 15vw;
+        margin: 0 .5vw;
+    }
+    .search input{
+        margin-left: 5vw;
+        width: 25vw;
+    }
+    .search-here{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .search-here i{
+        font-size: .8em;
+        color: rgb(158, 157, 157);
+        position: absolute;
+        left: 66%;
+    }
+    .nextlist{
+        font-size: .7em;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+    .fwdicon{
+        color: white;
+        margin:0 1em;
+        background-color: rgb(145, 218, 36);
+        padding: .2em .5em;
+        border-radius: 1em;
+    }
+    .bckicon{
+        color: white;
+        background-color: rgb(145, 218, 36);
+        padding: .2em .5em;
+        border-radius: 1em;
+    }
+    .employees-profile{
+        display: none;
+    }
+    ul{
+        display: grid;
+        grid-template-columns: .1fr .3fr .3fr .5fr .3fr .2fr .1fr;
+        padding: 1em;
+    }
+    ul .checkmob{
+        display: none;
+    }
+    #details-head{
+        font-family: 'PT Sans', sans-serif;
+        color: rgb(12, 32, 97);
+        margin-bottom: -3vh;
+        font-size: .8em;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    #details{
+        align-items: center;
+        color: rgb(12, 32, 97);
+        font-family: 'PT Sans', sans-serif;
+        background-color: white;
+        margin: 1em 0;
+    }
+    
+    ul :nth-child(2){
+        text-transform: capitalize;
+        font-weight: bold;
+    }
+    ul :nth-child(3){
+        text-transform: capitalize;
+        font-weight: bold;
+    }
+    #details:hover{
+        cursor: pointer;
+        text-align: center;
+        height: 3vh;
+        font-size: 1.03em;
+        background-color: rgb(145, 218, 36);;
+        transition: ease-in-out .5s;
+    }
+}
+@media (min-width:60em){
+    header{
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em;
+        height: 3vh;
+        margin: 2vh;
+    }
+    .geticon{
+        background-color: rgb(145, 218, 36);
+        color: white;
+        padding: .2em;
+    }
+    .dp{
+        height: 2em;
+        width: 2em;
+        background-color: rgb(155, 154, 154);
+        border-radius: 1em;
+        margin: 1em;
+    }
+    #account{
+        display: grid;
+        grid-template-columns: 1fr 1fr .2fr;
+        justify-content: space-between;
+        align-content: space-between;
+        align-items: center;
+    }
+    #call-sidebar{
+        display: none;
+    }
+    button{
+        color: white;
+        background-color: rgb(145, 218, 36);
+        border: 0;
+        width: 8em;
+        height: 2em;
+    }
+    button:hover{
+        cursor: pointer;
+        font-size: 1em;
+        background-color: green;
+        transition: ease-in-out .3s;
+
+    }
+    main{
+        display: grid;
+        grid-template-columns: .12fr 1fr;
+    }
+    #sidebar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10vh;
+        background-color: white;
+        height: 90%;
+        margin:0 2vh;
+    }
+    #sidebar img{
+        margin: 2em 0;
+        width: 1.6em;
+    }
+    #sidebar img:hover{
+        padding: .5em;
+        background-color: greenyellow;
+        transition: ease-in-out .3s;
+    }
+    #employees{
+        padding: 1.5em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #josh-bakery{
+        padding: 1.5em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+    }
+    #searchline{
+        padding: 1.5em;
+        display: grid;
+        grid-template-columns: 1fr .17fr;
+    }
+    #searchbox{
+        display: flex;
+        justify-content: flex-end;
+        justify-content: space-between;
+    }
+    .search input,select{
+        border-radius: .4em;
+        border-color: rgb(212, 209, 209);
+        height: 3.5vh;
+        width: 15vw;
+        margin: 0 .5vw;
+    }
+    .search input{
+        margin-left: 5vw;
+        width: 25vw;
+    }
+    .search-here{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .search-here i{
+        font-size: .8em;
+        color: rgb(158, 157, 157);
+        position: absolute;
+        left: 60vw;
+    }
+    .nextlist{
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+    .fwdicon{
+        color: white;
+        margin:0 1em;
+        background-color: rgb(145, 218, 36);
+        padding: .2em .5em;
+        border-radius: 1em;
+    }
+    .bckicon{
+        color: white;
+        background-color: rgb(145, 218, 36);
+        padding: .2em .5em;
+        border-radius: 1em;
+    }
+    .employees-profile{
+        display: none;
+    }
+    ul{
+        display: grid;
+        grid-template-columns: .1fr .3fr .3fr .5fr .3fr .2fr .1fr;
+        padding: 1em;
+    }
+    ul checkmob{
+        display: none;
+    }
+    #details-head{
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    #details{
+        background-color: white;
+        margin: 1em 0;
+    }
+    #details:hover{
+        text-align: center;
+        height: 3vh;
+        transition: ease-in-out .5s;
+    }
+}

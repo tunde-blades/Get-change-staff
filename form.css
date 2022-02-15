@@ -1,0 +1,296 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    background-color: rgba(240, 245, 241, 0.719);
+    height: 100vh;
+}
+@media (max-width: 35em){
+    .maincontainer{
+        display: grid;
+    }
+    .image-container{
+        display: none;
+    }
+    .formhead{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: rgb(57, 85, 177);
+    }
+    .create h1{
+        font-size: 2em;
+        padding-bottom: .5em;
+    }
+    .sign-in{
+        font-size: 1.1em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .login{
+        margin-left: .2em;
+        color: rgb(72, 243, 66);
+    }
+    .form-container{
+        position: relative;
+        top: 10vh;
+    }
+    .register{
+        text-transform: capitalize;
+        padding: 3em;
+        position: absolute;
+        top: 13vh;
+        left: 15vw;
+        width: 50vw;
+        background-color: white;
+        box-shadow: 0 0 2em rgb(182, 180, 180);
+        height: 60vh;
+        border-radius: 1em;
+    }
+    .register label{
+        line-height: 2.5vh;
+    }
+    .name{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    input{
+        color: blue;
+        border: none;
+        width: 50vw;
+        height: 4vh;
+        font-size: .7em;
+        text-transform: capitalize;
+    }
+    label i{
+        position: absolute;
+        left: 55vw;
+        text-align: center;
+    }
+    label p{
+        color: gray;
+        padding-top:4vh ;
+    }
+    
+    button{
+        text-transform: capitalize;
+        position: absolute;
+        left: 15vw;
+        top: 62vh;
+        background-color: rgb(72, 243, 66);
+        color: white;
+        border: 0;
+        width: 15em;
+        height: 2.3em;
+        border-radius: .2em;
+    }
+    footer{
+        position: relative;
+        top: 90vh;
+        height: 10vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        line-height: 3vh;
+    }
+    .terms{
+        display: flex;
+    }
+    .terms p{
+        color:rgb(72, 243, 66) ;
+        padding-left: 1vw;
+    }
+}
+@media (min-width: 35em){
+    .maincontainer{
+        display: grid;
+        grid-template-columns: .5fr 1fr;
+    }
+    .image-container{
+        height: 100vh;
+        width: 45vw;
+        background: url(guy.jpg);
+        background-position: calc(30%);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .formhead{
+        color: rgb(46, 76, 175);
+        position: absolute;
+        left: 5vw;
+        top: -5vh;
+        height: 10vh;
+    }
+    .create h1{
+        font-size: 1.7em;
+        padding-bottom: 1vh;
+    }
+    .sign-in{
+        font-size: 1.1em;
+        display: flex;
+        flex-direction: row;
+    }
+    .login{
+        margin-left: .5em;
+        color: rgb(146, 233, 17);
+    }
+    .form-container{
+        position: relative;
+        top: 10vh;
+
+    }
+    .register{
+        text-transform: capitalize;
+        padding: 3em;
+        position: absolute;
+        top: 10vh;
+        left: 3vw;
+        width: 35vw;
+        line-height: 3vh;
+        background-color: white;
+        box-shadow: 0 0 2em rgb(182, 180, 180);
+        height: 55vh;
+        border-radius: 1em;
+    }
+    .register label{
+        line-height: 3.5vh;
+    }
+    .name{
+        display: flex;
+        justify-content: space-between;
+    }
+    .name hr{
+        display: none;
+    }
+    input{
+        border: none;
+        width: 17vw;
+        height: 3vh;
+    }
+    label i{
+        position: absolute;
+        left: 38vw;
+        text-align: center;
+    }
+    label p{
+        padding-top: 5vh;
+    }
+    button{
+        position: absolute;
+        left: 25vw;
+        top: 58vh;
+        background-color: rgb(146, 233, 17);
+        border: 0;
+        width: 10em;
+        height: 2em;
+        border-radius: .3em;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        top: 85vh;
+        line-height: 2.5vh;
+}
+.terms{
+    display: flex;
+}
+.terms p{
+    padding-left: 1vh;
+    color:rgb(146, 233, 17) ;
+}
+}
+@media (min-width: 62em){
+.maincontainer{
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+}
+.image-container{
+    height: 100vh;
+    width: 50vw;
+    background: url(guy.jpg);
+    background-position:calc(30%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.formhead{
+    color: rgb(32, 70, 196);
+    position: absolute;
+    left: 4vw;
+    top: 10vw;
+    top: -5vh;
+}
+.create h1{
+    font-size: 2em;
+}
+.sign-in{
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: row;
+}
+.login{
+    margin-left: .5em;
+    color: rgb(146, 233, 17);
+}
+.form-container{
+    position: relative;
+    top: 10vh;
+}
+.register{
+    text-transform: capitalize;
+    padding: 3em;
+    position: absolute;
+    top: 10vh;
+    left: 3vw;
+    width: 35vw;
+    line-height: 3vh;
+    background-color: white;
+    box-shadow: 0 0 2em rgb(182, 180, 180);
+    height: 50vh;
+    border-radius: 1em;
+}
+.register label{
+    line-height: 2.5vh;
+}
+.name{
+    display: flex;
+    justify-content: space-between;
+}
+.name hr{
+    display: none;
+}
+input{
+    text-transform: capitalize;
+    color: blue;
+    border: none;
+    width: 17vw;
+    height: 3vh;
+}
+label i{
+    position: absolute;
+    left: 36vw;
+    text-align: center;
+}
+.terms p{
+    padding-left: 1vh;
+}
+button{
+    position: absolute;
+    left: 25vw;
+    top: 50vh;
+    background-color: rgb(146, 233, 17);
+    border: 0;
+    width: 10em;
+    height: 2em;
+    border-radius: .3em;
+}
+}
